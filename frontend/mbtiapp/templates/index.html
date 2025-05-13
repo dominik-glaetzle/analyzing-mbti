@@ -1,11 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h2>Test</h2>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>MBTI - Analyzer</title>
+    {% load bootstrap5 %}
+    {% bootstrap_css %} 
+    {% bootstrap_javascript %} 
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'mbtiapp/style.css' %}" />
+  </head>
+
+  <body>
+    <h1>MBTI - Analyzer</h1>
+    <h4><span id="slogan-text"></span><span class="cursor">|</span></h4>
+    <form
+      method="POST"
+      action="/"
+      class="form mt-4 d-flex align-items-center justify-content-center"
+    >
+      {% csrf_token %}
+      <input
+        type="text"
+        name="user_text"
+        placeholder="Describe your day in a few words ..."
+        class="input-form form-control"
+        required
+      />
+      <!--<TODO : parse user input and send it so view, start R subprocess-->
+      <button type="submit" class="submit-button ms-3">Submit</button>
+    </form>
+    <script src="{% static 'mbtiapp/js/typing_animation.js' %}"></script>
+  </body>
+  <footer class="footer bg-dark text-white text-center py-2 fixed-bottom">
+    <small>© Dominik Glätzle & Peter Schulze | 2025</small>
+  </footer>
 </html>
