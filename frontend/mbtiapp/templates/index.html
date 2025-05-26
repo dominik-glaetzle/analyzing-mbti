@@ -28,9 +28,16 @@
         class="input-form form-control"
         required
       />
-      <!--<TODO : parse user input and send it so view, start R subprocess-->
       <button type="submit" class="submit-button ms-3">Submit</button>
     </form>
+          {% if prediction %}
+            <div class="card mt-5 mb-5 shadow" style="max-width: 600px; margin: 0 auto; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.15); backdrop-filter: blur(8px); border-radius: 20px; color: white;">
+              <div class="card-body text-center py-4">
+                <h4 class="card-title mb-3">Your Predicted MBTI Type</h4>
+                <p class="card-text display-5 fw-bold" style="letter-spacing: 1px;">{{ prediction }}</p>
+              </div>
+            </div>
+          {% endif %}
     <script src="{% static 'mbtiapp/js/typing_animation.js' %}"></script>
   </body>
   <footer class="footer bg-dark text-white text-center py-2 fixed-bottom">
