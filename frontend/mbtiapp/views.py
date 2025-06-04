@@ -8,7 +8,7 @@ def index(request):
     if request.method == 'POST':
         user_input = request.POST.get('user_text')
         result = subprocess.run(
-            ['Rscript', '/Users/dominik/coding/analyzing-mbti/R/mbti_predictor.r', user_input],
+            ['Rscript', '/Users/dominik/coding/analyzing-mbti/R/mbti_predictor_rf.r', user_input],
             capture_output=True,
             text=True
         )
