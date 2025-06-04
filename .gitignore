@@ -5,3 +5,4 @@ db.sqlite3
 .env
 *.csv
 frontend/.DS_Store
+.DS_Store
