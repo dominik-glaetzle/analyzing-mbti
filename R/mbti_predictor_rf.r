@@ -7,7 +7,7 @@ library(randomForest)
 
 model <- readRDS("/Users/dominik/coding/analyzing-mbti/R/mbti_model_rf.rds")
 label_levels <- readRDS("/Users/dominik/coding/analyzing-mbti/R/mbti_label_levels_rf.rds")
-train_features <- readRDS("/Users/dominik/coding/analyzing-mbti/R/mbbti_features_rf.rds")
+train_features <- readRDS("/Users/dominik/coding/analyzing-mbti/R/mbti_features_rf.rds")
 
 
 corpus <- corpus(input_text)
